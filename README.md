@@ -97,7 +97,7 @@ The counterintuitive accuracy increase at higher λ is likely due to the regular
 
 ### 1. Gate Value Distribution (`gate_value_distribution.png`)
 
-![Gate Value Distribution](gate_value_distribution.png)
+![Gate Value Distribution](images/gate_value_distribution.png)
 
 A histogram of all gate values from the best model (λ = 1e-4). The massive spike at ~0 (≈1M weights) confirms the network has successfully learned to prune itself — the vast majority of gates collapsed to near-zero. A small cluster of non-zero gates represents the connections the model deemed essential for classification.
 
@@ -105,7 +105,7 @@ A histogram of all gate values from the best model (λ = 1e-4). The massive spik
 
 ### 2. Lambda vs Accuracy & Sparsity (`lambda_vs_accuracy_plot.png`)
 
-![Lambda vs Accuracy and Sparsity](lambda_vs_accuracy_plot.png)
+![Lambda vs Accuracy and Sparsity](images/lambda_vs_accuracy_plot.png)
 
 Tracks both test accuracy and sparsity as λ increases (log scale). Key observations:
 - **Sparsity scales aggressively** with λ — going from 77.7% at 1e-5 to 93.7% at 1e-4.
@@ -116,7 +116,7 @@ Tracks both test accuracy and sparsity as λ increases (log scale). Key observat
 
 ### 3. CDF of Gate Values (`cdf_img.png`)
 
-![CDF of Gate Values](cdf_img.png)
+![CDF of Gate Values](images/cdf_img.png)
 
 The Cumulative Distribution Function of gate values for the best model. The CDF reaches ~0.94 by the pruning threshold (dashed line at ~0.01), confirming that over 93% of gates lie below the threshold. The steep vertical rise near 0 visually reinforces the bimodal nature of the gate distribution — gates are either essentially zero or meaningfully active, with very little in between.
 
